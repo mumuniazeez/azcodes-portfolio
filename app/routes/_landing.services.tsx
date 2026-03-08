@@ -24,7 +24,7 @@ export function loader({}: Route.LoaderArgs): Project[] {
       title: "Tech Summer fro Teens by TGDI",
       description:
         "Volunteered in 2025 to help introduce teenagers in underserved Nigerian communities to technology. Supported coding sessions, guided students through basic programming concepts, and encouraged interest in digital skills and problem-solving.",
-      image: "/images/charmpay_logo.png",
+      image: "/images/tgdi_image.png",
     },
   ];
 }
