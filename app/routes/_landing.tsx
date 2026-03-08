@@ -37,15 +37,30 @@ export default function Layout() {
               technologies.
             </p>
             <div className="flex gap-2 mt-2">
-              <Button size={"icon"} className={"text-white cursor-target"}>
-                <HugeiconsIcon icon={Github} />
-              </Button>
-              <Button size={"icon"} className={"text-white cursor-target"}>
-                <HugeiconsIcon icon={Twitter} />
-              </Button>
-              <Button size={"icon"} className={"text-white cursor-target"}>
-                <HugeiconsIcon icon={Linkedin} />
-              </Button>
+              <a
+                href="https://github.com/mumuniazeez"
+                target="_blank"
+                className="cursor-none"
+              >
+                <Button
+                  size={"icon"}
+                  className={"text-white cursor-none cursor-target"}
+                >
+                  <HugeiconsIcon icon={Github} />
+                </Button>
+              </a>
+              <a
+                href="https://x.com/azcodesdev"
+                target="_blank"
+                className="cursor-none"
+              >
+                <Button
+                  size={"icon"}
+                  className={"text-white cursor-none cursor-target"}
+                >
+                  <HugeiconsIcon icon={Twitter} />
+                </Button>
+              </a>
             </div>
           </div>
           <div className="mt-3">
@@ -61,7 +76,7 @@ export default function Layout() {
                   key={tab.to}
                   to={tab.to}
                   className={cn(
-                    "cursor-target rounded-full text-white px-3 py-1 tab transition-colors",
+                    "cursor-target rounded-full text-white px-3 py-1 tab transition-colors cursor-none",
                     pathname === tab.to && "tab-active",
                   )}
                 >
@@ -72,7 +87,7 @@ export default function Layout() {
             <div className="mt-3">
               <Outlet />
             </div>
-            <div className="mt-10 border-t border-border/10 rounded-full p-1 flex">
+            <div className="mt-10 border-t border-border/10 p-1 flex">
               <p className="text-white/60">
                 Build with <span className="text-red-500">&hearts;</span> by
                 <span className="text-white font-bold"> AzCodes</span>
