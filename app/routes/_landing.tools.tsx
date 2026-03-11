@@ -30,16 +30,54 @@ import {
   SiNextdotjs,
   SiExpress,
   SiNodedotjs,
-    SiNginx,
-    SiDocker,
+  SiNginx,
+  SiDocker,
   SiSwagger,
-  SiGithub
+  SiGithub,
 } from "react-icons/si";
 import type { IconType } from "react-icons/lib";
 export function meta({}: Route.MetaArgs) {
   return [
+    { title: "Tools & Tech Stack | Mumuni Abdulazeez (AzCodes)" },
     {
-      title: "Tools",
+      name: "description",
+      content:
+        "Explore the technology stack and development tools used by Mumuni Abdulazeez (AzCodes), including React, Node.js, TypeScript, and more.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Tech Stack, React, Node.js, TypeScript, Next.js, Docker, Nginx, PostgreSQL, MongoDB, AzCodes",
+    },
+    { name: "author", content: "Mumuni Abdulazeez (AzCodes)" },
+    {
+      property: "og:title",
+      content: "Tools & Tech Stack | Mumuni Abdulazeez (AzCodes)",
+    },
+    {
+      property: "og:description",
+      content: "The tech stack and tools used by Mumuni Abdulazeez (AzCodes).",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://azcodes.dev/tools" },
+    {
+      property: "og:image",
+      content: "https://azcodes.dev/images/og-image.png",
+    },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:site", content: "@azcodesdev" },
+    { name: "twitter:creator", content: "@azcodesdev" },
+    {
+      name: "twitter:title",
+      content: "Tools & Tech Stack | Mumuni Abdulazeez (AzCodes)",
+    },
+    {
+      name: "twitter:description",
+      content: "The tech stack and tools used by Mumuni Abdulazeez (AzCodes).",
+    },
+    {
+      name: "twitter:image",
+      content: "https://azcodes.dev/images/og-image.png",
     },
   ];
 }

@@ -13,9 +13,40 @@ import { GoDotFill } from "react-icons/go";
 
 export function meta({}: Route.MetaArgs) {
   return [
+    { title: "Experience | Mumuni Abdulazeez (AzCodes)" },
     {
-      title: "Experience",
+      name: "description",
+      content:
+        "Professional work experience of Mumuni Abdulazeez (AzCodes), featuring roles at Antartes and Charmpay as a Project Manager and Backend Engineer.",
     },
+    {
+      name: "keywords",
+      content: "Experience, Work History, Antartes, Charmpay, Project Manager, Backend Engineer, AzCodes",
+    },
+    { name: "author", content: "Mumuni Abdulazeez (AzCodes)" },
+    {
+      property: "og:title",
+      content: "Experience | Mumuni Abdulazeez (AzCodes)",
+    },
+    {
+      property: "og:description",
+      content: "Professional work experience of Mumuni Abdulazeez (AzCodes).",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://azcodes.dev/experience" },
+    { property: "og:image", content: "https://azcodes.dev/images/og-image.png" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:site", content: "@azcodesdev" },
+    { name: "twitter:creator", content: "@azcodesdev" },
+    {
+      name: "twitter:title",
+      content: "Experience | Mumuni Abdulazeez (AzCodes)",
+    },
+    {
+      name: "twitter:description",
+      content: "Professional work experience of Mumuni Abdulazeez (AzCodes).",
+    },
+    { name: "twitter:image", content: "https://azcodes.dev/images/og-image.png" },
   ];
 }
 

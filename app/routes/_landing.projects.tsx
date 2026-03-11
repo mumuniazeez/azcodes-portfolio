@@ -6,9 +6,34 @@ import { SiGithub } from "react-icons/si";
 
 export function meta({}: Route.MetaArgs) {
   return [
+    { title: "Projects | Mumuni Abdulazeez (AzCodes)" },
     {
-      title: "Projects",
+      name: "description",
+      content:
+        "Explore a collection of projects built by Mumuni Abdulazeez (AzCodes), including Charmpay and other modern web applications.",
     },
+    {
+      name: "keywords",
+      content: "Projects, Portfolio, Software Engineering, Charmpay, web applications, AzCodes",
+    },
+    { name: "author", content: "Mumuni Abdulazeez (AzCodes)" },
+    { property: "og:title", content: "Projects | Mumuni Abdulazeez (AzCodes)" },
+    {
+      property: "og:description",
+      content: "Explore a collection of projects built by Mumuni Abdulazeez (AzCodes).",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://azcodes.dev/projects" },
+    { property: "og:image", content: "https://azcodes.dev/images/og-image.png" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:site", content: "@azcodesdev" },
+    { name: "twitter:creator", content: "@azcodesdev" },
+    { name: "twitter:title", content: "Projects | Mumuni Abdulazeez (AzCodes)" },
+    {
+      name: "twitter:description",
+      content: "Explore a collection of projects built by Mumuni Abdulazeez (AzCodes).",
+    },
+    { name: "twitter:image", content: "https://azcodes.dev/images/og-image.png" },
   ];
 }
 

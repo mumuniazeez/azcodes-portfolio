@@ -8,8 +8,34 @@ import { Outlet } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Home and About | Mumuni Abdulazeez (AzCodes)" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "About | Mumuni Abdulazeez (AzCodes) - Full-Stack Developer" },
+    {
+      name: "description",
+      content:
+        "Mumuni Abdulazeez (AzCodes) is a Full-Stack Developer and Product-Focused Builder passionate about building useful technology and digital solutions.",
+    },
+    {
+      name: "keywords",
+      content: "Full-Stack Developer, Product Builder, ReactJS, NextJS, NodeJS, Portfolio, Mumuni Abdulazeez, AzCodes",
+    },
+    { name: "author", content: "Mumuni Abdulazeez (AzCodes)" },
+    { property: "og:title", content: "About | Mumuni Abdulazeez (AzCodes)" },
+    {
+      property: "og:description",
+      content: "Full-Stack Developer and Product-Focused Builder passionate about building useful technology.",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://azcodes.dev/" },
+    { property: "og:image", content: "https://azcodes.dev/images/og-image.png" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:site", content: "@azcodesdev" },
+    { name: "twitter:creator", content: "@azcodesdev" },
+    { name: "twitter:title", content: "About | Mumuni Abdulazeez (AzCodes)" },
+    {
+      name: "twitter:description",
+      content: "Full-Stack Developer and Product-Focused Builder.",
+    },
+    { name: "twitter:image", content: "https://azcodes.dev/images/og-image.png" },
   ];
 }
 

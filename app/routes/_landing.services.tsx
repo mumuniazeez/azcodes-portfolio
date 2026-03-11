@@ -6,9 +6,34 @@ import { SiGithub } from "react-icons/si";
 
 export function meta({}: Route.MetaArgs) {
   return [
+    { title: "Community & Services | Mumuni Abdulazeez (AzCodes)" },
     {
-      title: "Services",
+      name: "description",
+      content:
+        "Learn how Mumuni Abdulazeez (AzCodes) contributes to the community through technology education, volunteering, and digital services.",
     },
+    {
+      name: "keywords",
+      content: "Volunteering, Tech Education, Community Service, Digital Solutions, AzCodes",
+    },
+    { name: "author", content: "Mumuni Abdulazeez (AzCodes)" },
+    { property: "og:title", content: "Community & Services | Mumuni Abdulazeez (AzCodes)" },
+    {
+      property: "og:description",
+      content: "Community contributions and services by Mumuni Abdulazeez (AzCodes).",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://azcodes.dev/services" },
+    { property: "og:image", content: "https://azcodes.dev/images/og-image.png" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:site", content: "@azcodesdev" },
+    { name: "twitter:creator", content: "@azcodesdev" },
+    { name: "twitter:title", content: "Community & Services | Mumuni Abdulazeez (AzCodes)" },
+    {
+      name: "twitter:description",
+      content: "Community contributions and services by Mumuni Abdulazeez (AzCodes).",
+    },
+    { name: "twitter:image", content: "https://azcodes.dev/images/og-image.png" },
   ];
 }
 
