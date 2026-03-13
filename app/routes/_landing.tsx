@@ -64,7 +64,7 @@ export default function Layout() {
             </div>
           </div>
           <div className="mt-3">
-            <div className="bg-secondary/10 border border-border/10 backdrop-blur-sm rounded-full px-2 py-1 flex gap-x-3">
+            <div className="bg-secondary/10 border border-border/10 backdrop-blur-sm rounded-full px-2 py-1 flex gap-x-2 w-fit">
               {[
                 { label: "About", to: "/" },
                 { label: "Projects", to: "/projects" },
@@ -76,7 +76,7 @@ export default function Layout() {
                   key={tab.to}
                   to={tab.to}
                   className={cn(
-                    "cursor-target rounded-full text-white px-3 py-1 tab transition-colors cursor-none",
+                    "cursor-target rounded-full text-white px-2 py-1 tab transition-colors cursor-none",
                     pathname === tab.to && "tab-active",
                   )}
                 >

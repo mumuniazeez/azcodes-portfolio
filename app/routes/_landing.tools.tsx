@@ -208,7 +208,7 @@ export default function Tools({ loaderData }: Route.ComponentProps) {
         {loaderData.map((data) => (
           <div className="my-5">
             <p className="text-xl">{data.label}</p>
-            <div className="grid grid-cols-7 items-center justify-between gap-4">
+            <div className="grid lg:grid-cols-8 md:grid-cols-5 grid-cols-4 items-center justify-between gap-4">
               {data.tools.map((tool) => (
                 <div className="group transition-all cursor-target flex justify-center flex-col items-center">
                   <div className="group-hover:scale-110 group-hover:bg-white/10 p-2 rounded-lg mb-2">
