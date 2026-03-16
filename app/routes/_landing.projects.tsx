@@ -90,7 +90,7 @@ export function loader({}: Route.LoaderArgs): Project[] {
       title: "Lobby",
       description:
         "Lobby is an online chatting platform for communities. Lobby makes it possible for people to connect with each other, build up communities and share important information.",
-      liveUrl: "https://lobby.vercel.app",
+      liveUrl: "https://lobbyapp.vercel.app",
       isLive: true,
       projectImg: "/images/lobby_logo.png",
       githubUrl: "https://github.com/mumuniazeez/lobbyapp",

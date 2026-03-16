@@ -21,7 +21,8 @@ export function meta({}: Route.MetaArgs) {
     },
     {
       name: "keywords",
-      content: "Experience, Work History, Antartes, Charmpay, Project Manager, Backend Engineer, AzCodes",
+      content:
+        "Experience, Work History, Antartes, Charmpay, Project Manager, Backend Engineer, AzCodes",
     },
     { name: "author", content: "Mumuni Abdulazeez (AzCodes)" },
     {
@@ -34,7 +35,10 @@ export function meta({}: Route.MetaArgs) {
     },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://azcodes.dev/experience" },
-    { property: "og:image", content: "https://azcodes.dev/images/og-image.png" },
+    {
+      property: "og:image",
+      content: "https://azcodes.dev/images/og-image.png",
+    },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:site", content: "@azcodesdev" },
     { name: "twitter:creator", content: "@azcodesdev" },
@@ -46,7 +50,10 @@ export function meta({}: Route.MetaArgs) {
       name: "twitter:description",
       content: "Professional work experience of Mumuni Abdulazeez (AzCodes).",
     },
-    { name: "twitter:image", content: "https://azcodes.dev/images/og-image.png" },
+    {
+      name: "twitter:image",
+      content: "https://azcodes.dev/images/og-image.png",
+    },
   ];
 }
 
@@ -79,6 +86,22 @@ export function loader({}: Route.LoaderArgs): Experience[] {
       ],
       companyLogo: "/images/antartes_logo.png",
       type: "Self-Employed",
+    },
+    {
+      title: "TGDI: Tech Summer for Teens",
+      description:
+        "TGDI: Tech Summer for Teens is an event organized to teach Teenagers (13-18 years) about technology, focusing on the under-served communities in Nigeria",
+      startDate: "18th August, 2025",
+      endDate: "29th August, 2025",
+      roles: [
+        {
+          title: "Facilitator for Web Development",
+          startDate: "18th August, 2025",
+          endDate: "29th August, 2025",
+        },
+      ],
+      companyLogo: "/images/tdgi_logo.png",
+      type: "Volunteer",
     },
     {
       title: "Charmpay",

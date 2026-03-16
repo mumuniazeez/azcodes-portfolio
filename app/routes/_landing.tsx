@@ -27,7 +27,10 @@ export default function Layout() {
       <main className="min-h-screen pt-20 pb-16 px-6">
         <div className="max-w-2xl mx-auto">
           <div>
-            <div className="text-4xl font-bold mb-2">Hi, I'm Abdulazeez</div>
+            <div className="text-4xl font-bold mb-2">
+              Hi, I'm Abdulazeez{" "}
+              <span className="text-white/60">{"<AzCodes />"}</span>
+            </div>
             <p>
               I'm a Full-Stack Developer and Product-Focused Builder who enjoys
               turning ideas into real products. I specialize in building modern
