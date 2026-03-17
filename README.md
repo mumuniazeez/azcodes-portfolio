@@ -6,7 +6,7 @@ A modern, responsive developer portfolio built with **React Router** and **Tailw
 
 ## 🌐 Live Demo
 
-[Check it out here](htps://azcodes.vercel.app)
+[Check it out here](https://azcodes.vercel.app)
 
 ---
 
