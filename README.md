@@ -19,7 +19,7 @@ A modern, responsive developer portfolio built with **React Router** and **Tailw
 
 ### Tools & Environment
 - Git & GitHub  
-- Vite (or CRA — update if needed)  
+- Vite 
 - Linux  
 
 ---
