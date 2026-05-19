@@ -42,4 +42,8 @@ npm install
 npm run dev
 ```
 
+## 🤖 AI Usage for this Project
+AI was used in this project for code completion and bug fixes
+
+
 Writen with <3 by AzCodes
