@@ -69,6 +69,15 @@ export function loader({}: Route.LoaderArgs): Project[] {
       projectImg: "/images/charmpay_logo.png",
     },
     {
+      title: "AzCodes Portfolio",
+      description:
+        "This is a portfolio i built to showcase my project, skill, experience and a little about myself.",
+      liveUrl: "https://azcodes.vercel.app",
+      isLive: true,
+      projectImg: "/images/og-image.png",
+      githubUrl: "https://github.com/mumuniazeez/azcodes-portfolio",
+    },
+    {
       title: "MeFile",
       description:
         "Me-file is an online application that allow its user to resize images, and many more for FREE. This application is one best online FREE file converter.",
@@ -76,6 +85,24 @@ export function loader({}: Route.LoaderArgs): Project[] {
       isLive: true,
       projectImg: "/images/mefile_logo.png",
       githubUrl: "https://github.com/mumuniazeez/me-file-project",
+    },
+    {
+      title: "Shipmates",
+      description:
+        "Shipmate is an Hack Club match maker for hackers. Where you get to meet people to collaborate on project's with you.",
+      // liveUrl: "https://pdfman-xi.vercel.app",
+      isLive: false,
+      projectImg: "https://shipmates.vercel.app/Shipmates-Logo.png",
+      githubUrl: "https://github.com/mumuniazeez/shipmates",
+    },
+    {
+      title: "PDFman",
+      description:
+        "PDFman is an open source web application that allows you to edit PDF documents (Add text annotations, Signature, Rearrange Pages, etc)..",
+      liveUrl: "https://pdfman-xi.vercel.app",
+      isLive: true,
+      projectImg: "https://pdfman-xi.vercel.app/logo.svg",
+      githubUrl: "https://github.com/mumuniazeez/pdfman",
     },
     {
       title: "Backsnip",

@@ -1,32 +1,20 @@
-# 🚀 Welcome to My Portfolio
+# AzCodes Portfolio
 
-A modern, responsive developer portfolio built with **React Router** and **TailwindCSS** to showcase my projects, experience, and skills.
+This is a portfolio i built to showcase my project, skill, experience and a little about myself.
 
----
+![Project Screenshot](/public/images/project_screenshot.png)
 
-## 🌐 Live Demo
+## Tech Stack
 
-[Check it out here](https://azcodes.vercel.app)
+This portfolio was built with:
 
----
+- React Router
+- Tailwind CSS
+- Shadcn
 
-## 🛠️ Tech Stack
+## Run on your Computer
 
-### Frontend
-- React  
-- React Router  
-- TailwindCSS  
-
-### Tools & Environment
-- Git & GitHub  
-- Vite 
-- Linux  
-
----
-
-## 🚀 Getting Started
-
-To run this project locally:
+To run this project locally on your computer:
 
 ```bash
 # Clone the repository
@@ -36,14 +24,14 @@ git clone https://github.com/mumuniazeez/azcodes-portfolio.git
 cd azcodes-portfolio
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm dev
 ```
 
-## 🤖 AI Usage for this Project
-AI was used in this project for code completion and bug fixes
+## AI Usage for this Project
 
+AI was used in this project for code completion and bug fixes.
 
-Writen with <3 by AzCodes
+Built with <3 by AzCodes
