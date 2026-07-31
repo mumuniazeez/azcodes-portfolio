@@ -3,11 +3,18 @@ import TargetCursor from "../components/TargetCursor";
 import { Button } from "~/components/ui/button";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
+  Code,
   Github,
   Heart,
   Linkedin,
   Twitter,
   X,
+  CodeIcon,
+  CodeXml,
+  CodeSimpleIcon,
+  Moon02Icon,
+  Document,
+  Send,
 } from "@hugeicons/core-free-icons";
 import { Link, Outlet, useLocation } from "react-router";
 import { cn } from "~/lib/utils";
@@ -16,89 +23,47 @@ export default function Layout() {
   const { pathname } = useLocation();
   return (
     <>
-      <ClientOnlyComponent>
-        <TargetCursor
-          spinDuration={2}
-          hideDefaultCursor
-          parallaxOn
-          hoverDuration={0.2}
-        />
-      </ClientOnlyComponent>
-      <main className="min-h-screen pt-20 pb-16 px-6">
-        <div className="max-w-2xl mx-auto">
-          <div>
-            <div className="text-4xl font-bold mb-2">
-              Hi, I'm Abdulazeez{" "}
-              <span className="text-white/60">{"<AzCodes />"}</span>
-            </div>
-            <p>
-              I'm a Full-Stack Developer and Product-Focused Builder who enjoys
-              turning ideas into real products. I specialize in building modern
-              web applications, managing development teams, and creating
-              technology solutions that solve real problems. Currently, I’m
-              leading development at Antartes while exploring new tools and
-              technologies.
-            </p>
-            <div className="flex gap-2 mt-2">
-              <a
-                href="https://github.com/mumuniazeez"
-                target="_blank"
-                className="cursor-none"
-              >
-                <Button
-                  size={"icon"}
-                  className={"text-white cursor-none cursor-target"}
-                >
-                  <HugeiconsIcon icon={Github} />
-                </Button>
-              </a>
-              <a
-                href="https://x.com/azcodesdev"
-                target="_blank"
-                className="cursor-none"
-              >
-                <Button
-                  size={"icon"}
-                  className={"text-white cursor-none cursor-target"}
-                >
-                  <HugeiconsIcon icon={Twitter} />
-                </Button>
-              </a>
-            </div>
+      <header className="flex items-center justify-between py-3 px-10 bg-background border-b-4 gap-x-5">
+        <a href="#">
+          <div className="bg-main border-border shadow-shadow border-2 p-2 font-bold flex items-center gap-x-2">
+            <HugeiconsIcon icon={CodeSimpleIcon} />{" "}
+            <h1 className="text-2xl">azcodes.dev</h1>
           </div>
-          <div className="mt-3">
-            <div className="bg-secondary/10 border border-border/10 backdrop-blur-sm rounded-full px-2 py-1 flex gap-x-2 w-fit">
-              {[
-                { label: "About", to: "/" },
-                { label: "Projects", to: "/projects" },
-                { label: "Experience", to: "/experience" },
-                { label: "Tools", to: "/tools" },
-                { label: "Services", to: "/services" },
-              ].map((tab) => (
-                <Link
-                  key={tab.to}
-                  to={tab.to}
-                  className={cn(
-                    "cursor-target rounded-full text-white px-2 py-1 tab transition-colors cursor-none",
-                    pathname === tab.to && "tab-active",
-                  )}
-                >
-                  {tab.label}
-                </Link>
-              ))}
-            </div>
-            <div className="mt-3">
-              <Outlet />
-            </div>
-            <div className="mt-10 border-t border-border/10 p-1 flex">
-              <p className="text-white/60">
-                Build with <span className="text-red-500">&hearts;</span> by
-                <span className="text-white font-bold"> AzCodes</span>
-              </p>
-            </div>
-          </div>
+        </a>
+        <nav className="bg-white p-3 border-border border-2 shadow-shadow">
+          <ul className="flex gap-x-4 items-center">
+            <li className="bg-main p-3 border-border border-2 shadow-shadow">
+              <a href="#">Home</a>
+            </li>
+            <li className="p-3 hover:bg-main transition-all">
+              <a href="#">Projects</a>
+            </li>
+            <li className="p-3 hover:bg-main transition-all">
+              <a href="#">Tech Stack</a>
+            </li>
+            <li className="p-3 hover:bg-main transition-all">
+              <a href="#">Experience</a>
+            </li>
+            <li className="p-3 hover:bg-main transition-all">
+              <a href="#">Article</a>
+            </li>
+            <li className="p-3 hover:bg-main transition-all">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div className="flex items-center gap-x-3">
+          <Button>
+            <HugeiconsIcon icon={Moon02Icon} />
+          </Button>
+          <Button>
+            <HugeiconsIcon icon={Document} /> Resume
+          </Button>
+          <Button>
+            <HugeiconsIcon icon={Send} /> Hire Me
+          </Button>
         </div>
-      </main>
+      </header>
     </>
   );
 }
