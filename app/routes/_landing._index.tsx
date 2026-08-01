@@ -179,8 +179,8 @@ export default function Home() {
 
         <div className="flex items-end justify-between">
           <div className="md:w-[50%]">
-            <h3 className="text-4xl">ENGINEERING WITH</h3>
-            <h1 className="text-5xl p-2 -mt-2.5 neo-box bg-main font-bold w-fit">
+            <h3 className="text-4xl font-space-grotesk">ENGINEERING WITH</h3>
+            <h1 className="text-5xl p-2 -mt-2.5 neo-box bg-main font-bold w-fit font-space-grotesk">
               PRECISION AND INTENSION
             </h1>
           </div>
