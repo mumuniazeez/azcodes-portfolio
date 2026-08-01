@@ -23,7 +23,7 @@ export default function Layout() {
   const { pathname } = useLocation();
   return (
     <>
-      <header className="flex items-center justify-between py-3 px-10 bg-background border-b-4 gap-x-5">
+      <header className="flex items-center justify-between py-3 px-30 bg-background border-b-4 gap-x-5">
         <a href="#">
           <div className="bg-main border-border shadow-shadow border-2 p-2 font-bold flex items-center gap-x-2">
             <HugeiconsIcon icon={CodeSimpleIcon} />{" "}
@@ -64,6 +64,9 @@ export default function Layout() {
           </Button>
         </div>
       </header>
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }
