@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -62,8 +64,11 @@
   --font-weight-base: 500;
   --font-weight-heading: 700;
 
-  --animate-marquee: marquee 5s linear infinite;
-  --animate-marquee2: marquee2 5s linear infinite;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+
+  --animate-marquee: marquee 10s linear infinite;
+  --animate-marquee2: marquee2 10s linear infinite;
 
   @keyframes marquee {
     0% {
@@ -86,7 +91,7 @@
 
 @layer base {
   body {
-    @apply text-foreground font-base bg-background;
+    @apply text-foreground font-base bg-background font-plus-jakarta-sans;
   }
 
   h1,

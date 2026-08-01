@@ -74,8 +74,8 @@ export default function Home() {
 
         <div className="flex items-center justify-between gap-x-10 my-8">
           <div className="space-y-2 md:w-[50%]">
-            <h1 className="text-6xl">HEY! I'M</h1>
-            <h1 className="text-6xl p-2 bg-white neo-box rotate-1 font-bold">
+            <h1 className="text-5xl font-space-grotesk">HEY! I'M</h1>
+            <h1 className="text-5xl p-2 bg-white neo-box rotate-1 font-bold font-space-grotesk">
               ABDULAZEEZ MUMUNI
             </h1>
             <p className="mt-8 text-lg font-bold border-main border-l-5 ps-3">
@@ -148,9 +148,8 @@ export default function Home() {
         </Card> */}
 
           <div className="relative">
-            <Badge className="font-semibold neo-box transition-all -rotate-6 absolute bottom-2 -right-3">
+            <Badge className="font-semibold neo-box transition-all -rotate-6 absolute bottom-1 -right-3 px-10">
               {"<AzCodes />"}{" "}
-              <span className="text-black/60">// Full-Stack Eng.</span>
             </Badge>
             <img
               className="neo-box  w-100 h-100"
@@ -159,6 +158,7 @@ export default function Home() {
             />
           </div>
         </div>
+        <div className="grid grid-cols-4"></div>
       </section>
       <section id="marque">
         <Marquee
@@ -173,6 +173,21 @@ export default function Home() {
             "POSTGRESQL",
           ]}
         />
+      </section>
+      <section className="px-30 py-20 space-y-3">
+        <Badge className="font-bold">// WHO IS ABDULAZEEZ MUMUNI</Badge>
+
+        <div className="flex items-end justify-between">
+          <div className="md:w-[50%]">
+            <h3 className="text-4xl">ENGINEERING WITH</h3>
+            <h1 className="text-5xl p-2 -mt-2.5 neo-box bg-main font-bold w-fit">
+              PRECISION AND INTENSION
+            </h1>
+          </div>
+          <Button>
+            <HugeiconsIcon icon={Download} /> FULL RESUME (PDF)
+          </Button>
+        </div>
       </section>
     </div>
   );
