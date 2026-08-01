@@ -30,7 +30,7 @@ export default function Layout() {
             <h1 className="text-2xl">azcodes.dev</h1>
           </div>
         </a>
-        <nav className="bg-white p-3 border-border border-2 shadow-shadow">
+        <nav className="bg-secondary-background p-3 border-border border-2 shadow-shadow">
           <ul className="flex gap-x-4 items-center">
             <li className="bg-main p-3 border-border border-2 shadow-shadow">
               <a href="#">Home</a>
