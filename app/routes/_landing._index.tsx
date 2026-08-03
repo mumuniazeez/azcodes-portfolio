@@ -4,6 +4,7 @@ import AboutSection from "~/components/AboutSection";
 import HeroSection from "~/components/HeroSection";
 import ProjectsSection from "~/components/ProjectsSection";
 import SkillsSection from "~/components/SkillsSection";
+import WorkExperienceSection from "~/components/WorkExperienceSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -68,6 +69,7 @@ export default function Home() {
       <AboutSection />
       <ProjectsSection />
       <SkillsSection />
+      <WorkExperienceSection />
     </div>
   );
 }

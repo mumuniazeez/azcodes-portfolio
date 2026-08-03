@@ -133,9 +133,9 @@ export default function ProjectsSection() {
       <div className="bg-secondary-background neo-box p-3  flex items-center justify-between">
         <div className="flex items-center gap-3">
           <HugeiconsIcon icon={Filter} />
-          <Button className="font-bold">ALL</Button>
+          <Button>ALL</Button>
           {tags.map((tag, idx) => (
-            <Button key={idx} className="font-bold">
+            <Button key={idx}>
               {tag}
             </Button>
           ))}
