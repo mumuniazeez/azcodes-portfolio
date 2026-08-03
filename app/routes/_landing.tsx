@@ -3,14 +3,6 @@ import TargetCursor from "../components/TargetCursor";
 import { Button } from "~/components/ui/button";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  Code,
-  Github,
-  Heart,
-  Linkedin,
-  Twitter,
-  X,
-  CodeIcon,
-  CodeXml,
   CodeSimpleIcon,
   Moon02Icon,
   Document,
@@ -53,7 +45,7 @@ export default function Layout() {
           </ul>
         </nav>
         <div className="flex items-center gap-x-3">
-          <Button>
+          <Button size={"icon"}>
             <HugeiconsIcon icon={Moon02Icon} />
           </Button>
           <Button>

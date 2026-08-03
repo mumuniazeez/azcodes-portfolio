@@ -60,14 +60,14 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="flex items-center gap-2">
           {project.githubUrl && (
             <Link to={project.githubUrl} target="_blank">
-              <Button>
+              <Button size={"icon"}>
                 <HugeiconsIcon icon={Github} />
               </Button>
             </Link>
           )}
           {project.liveUrl && (
             <Link to={project.liveUrl} target="_blank">
-              <Button>
+              <Button size={"icon"}>
                 <HugeiconsIcon icon={ArrowUpRight} />
               </Button>
             </Link>

@@ -26,7 +26,7 @@ const workExperience: WorkExperience[] = [
   {
     id: 1,
     employmentType: "SELF-EMPLOYED",
-    location: "",
+    location: "REMOTE",
     company: "Antartes",
     companyLogo: "/images/antartes_logo.png",
     startDate: "2026",
@@ -42,7 +42,7 @@ const workExperience: WorkExperience[] = [
       "Architected and built backend APIs and services powering client-facing digital platforms.",
       "Established internal development workflows and processes for a growing agency team.",
     ],
-    technologies: [
+    technologiesAndSkills: [
       "Node.js",
       "NestJS",
       "TypeScript",
@@ -54,7 +54,7 @@ const workExperience: WorkExperience[] = [
   {
     id: 2,
     employmentType: "VOLUNTEER",
-    location: "",
+    location: "LAGOS, NIGERIA",
     company: "TGDI: Tech Summer for Teens",
     companyLogo: "/images/tdgi_logo.png",
     startDate: "18th August, 2025",
@@ -73,12 +73,12 @@ const workExperience: WorkExperience[] = [
       "Designed beginner-friendly curriculum and hands-on exercises to introduce first-time coders to building web pages.",
       "Mentored students through their first web development projects during the two-week program.",
     ],
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologiesAndSkills: ["HTML", "CSS", "JavaScript"],
   },
   {
     id: 3,
     employmentType: "CONTRACT",
-    location: "",
+    location: "REMOTE",
     company: "Charmpay",
     companyLogo: "/images/charmpay_logo.png",
     startDate: "2024",
@@ -93,7 +93,13 @@ const workExperience: WorkExperience[] = [
       "Designed backend APIs and database schema to support payment lifecycle states (pending, held, released, disputed).",
       "Implemented business logic for transaction verification and dispute resolution.",
     ],
-    technologies: ["Node.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma"],
+    technologiesAndSkills: [
+      "Node.js",
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+    ],
   },
 ];
 export default function WorkExperienceSection() {
@@ -115,8 +121,10 @@ export default function WorkExperienceSection() {
         </p>
       </div>
 
-      <div>
-        <WorkExperienceAccordion />
+      <div className="space-y-8">
+        {workExperience.map((work, idx) => (
+          <WorkExperienceAccordion key={idx} work={work} />
+        ))}
       </div>
     </section>
   );

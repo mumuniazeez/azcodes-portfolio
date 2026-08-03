@@ -70,13 +70,13 @@ export default function HeroSection() {
           </div>
           <div className="flex items-center space-x-3 mt-5">
             <p className="">Connect: </p>
-            <Button>
+            <Button size={"icon"}>
               <HugeiconsIcon icon={GithubIcon} fontWeight={900} />
             </Button>
-            <Button>
+            <Button size={"icon"}>
               <HugeiconsIcon icon={Twitter} fontWeight={900} />
             </Button>
-            <Button>
+            <Button size={"icon"}>
               <HugeiconsIcon icon={Email} fontWeight={900} />
             </Button>
           </div>
