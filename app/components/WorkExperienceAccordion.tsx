@@ -49,10 +49,10 @@ export default function WorkExperienceAccordion({
         className="bg-secondary-background hover:bg-secondary-background/70 transition-colors p-4 border-b-2 cursor-pointer"
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-col md:flex-row gap-3">
           <div className="flex items-center gap-3">
             <div className="bg-main p-3 border-2">
-              <h4 className="text-2xl">
+              <h4 className="md:text-2xl">
                 {work.id < 10 ? `0${work.id}` : work.id}
               </h4>
             </div>
@@ -67,7 +67,7 @@ export default function WorkExperienceAccordion({
                   <p className="text-xs">{work.location}</p>
                 </div>
               </div>
-              <h1 className="text-2xl">
+              <h1 className="md:text-2xl">
                 {work.roles.map((role) => role.title.toUpperCase()).join(" & ")}{" "}
                 <span className="bg-main p-1">
                   @ {work.company.toUpperCase()}

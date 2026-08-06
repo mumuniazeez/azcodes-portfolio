@@ -104,11 +104,14 @@ const workExperience: WorkExperience[] = [
 ];
 export default function WorkExperienceSection() {
   return (
-    <section className="px-30 py-20 space-y-10 border-t-2 bg-dots-pattern">
-      <div className="flex items-end justify-between">
+    <section
+      className="px-10  md:px-30 py-20 space-y-10 border-t-2 bg-dots-pattern"
+      id="experience"
+    >
+      <div className="flex gap-5 items-start md:items-end justify-between flex-col md:flex-row">
         <div className="space-y-3">
           <Badge className="font-bold">// CAREER TIMELINE</Badge>
-          <h3 className="text-5xl">
+          <h3 className="text-3xl md:text-5xl">
             WORK &{" "}
             <span className="p-2 neo-box bg-main font-bold w-fit ">
               EXPERIENCE

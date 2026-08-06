@@ -1,24 +1,13 @@
+"use client";
 import { Button } from "~/components/ui/button";
-import { HugeiconsIcon, type IconSvgElement } from "@hugeicons/react";
-import {
-  ArrowUp,
-  ArrowUpRight,
-  Bolt,
-  Code,
-  Download,
-  Filter,
-  Github,
-  Layer,
-  Rocket,
-  ShieldCheck,
-  Sparkle,
-  X,
-} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+
 import { Badge } from "~/components/ui/badge";
 import { Input } from "./ui/input";
-import { Link } from "react-router";
 import type { Project } from "./ProjectCard";
 import ProjectCard from "./ProjectCard";
+import { useState } from "react";
+import { Filter } from "@hugeicons/core-free-icons";
 
 const tags: Project["tags"] = [
   "AI & CODING",
@@ -91,7 +80,7 @@ const projects: Project[] = [
     isLive: true,
     githubUrl: "https://github.com/mumuniazeez/backsnip",
     tags: ["OPEN SOURCE", "AI & CODING"],
-    techStack: ["NodeJS", "ExpressJS", "PostgreSQL", "GEMINI"],
+    techStack: ["NodeJS", "ExpressJS", "PostgreSQL", "Google Gemini"],
   },
   {
     title: "Lobby",
@@ -113,12 +102,18 @@ const projects: Project[] = [
   },
 ];
 export default function ProjectsSection() {
+  const [selectedTag, setSelectedTag] = useState<Project["tags"][0] | "ALL">(
+    "ALL",
+  );
+
+  const [search, setSearch] = useState("");
+
   return (
-    <section className="px-30 py-20 space-y-10 border-t-2 bg-grid-pattern">
-      <div className="flex items-end justify-between">
+    <section className="px-10  md:px-30 py-20 space-y-10 border-t-2 bg-grid-pattern" id="projects">
+      <div className="flex gap-5 items-start md:items-end justify-between flex-col md:flex-row">
         <div className="space-y-3">
           <Badge className="font-bold">// FEATURED PORTFOLIO</Badge>
-          <h3 className="text-5xl">
+          <h3 className="text-3xl md:text-5xl">
             SELECTED{" "}
             <span className="p-2 neo-box bg-main font-bold w-fit ">
               PROJECTS
@@ -130,22 +125,46 @@ export default function ProjectsSection() {
           developer tools, and open-source packages.
         </p>
       </div>
-      <div className="bg-secondary-background neo-box p-3  flex items-center justify-between">
-        <div className="flex items-center gap-3">
+      <div className="bg-secondary-background neo-box p-3 gap-5 flex items-center justify-between flex-col md:flex-row">
+        <div className="flex items-center gap-3 flex-wrap">
           <HugeiconsIcon icon={Filter} />
-          <Button>ALL</Button>
+          <Button
+            onClick={() => setSelectedTag("ALL")}
+            variant={selectedTag === "ALL" ? "default" : "neutral"}
+          >
+            ALL
+          </Button>
           {tags.map((tag, idx) => (
-            <Button key={idx}>
+            <Button
+              key={idx}
+              onClick={() => setSelectedTag(tag)}
+              variant={selectedTag === tag ? "default" : "neutral"}
+            >
               {tag}
             </Button>
           ))}
         </div>
-        <Input placeholder="Search projects...." className="w-150" />
+        <Input
+          placeholder="Search projects...."
+          className="md:w-150"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
-      <div className="grid grid-cols-3 gap-8">
-        {projects.map((project, idx) => (
-          <ProjectCard project={project} key={idx} />
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects
+          .filter(
+            (p) =>
+              p.title.toLowerCase().includes(search.toLowerCase()) ||
+              p.shortDescription.toLowerCase().includes(search.toLowerCase()) ||
+              p.description.toLowerCase().includes(search.toLowerCase()),
+          )
+          .filter((p) =>
+            selectedTag !== "ALL" ? p.tags.includes(selectedTag) : true,
+          )
+          .map((project, idx) => (
+            <ProjectCard project={project} key={idx} />
+          ))}
       </div>
     </section>
   );

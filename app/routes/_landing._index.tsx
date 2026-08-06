@@ -19,7 +19,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "keywords",
       content:
-        "Full-Stack Developer, Product Builder, ReactJS, NextJS, NodeJS, Portfolio, Mumuni Abdulazeez, AzCodes",
+        "Full-Stack Developer, Product Builder, ReactJS, NextJS, NodeJS, Portfolio, Mumuni Abdulazeez, AzCodes , Software Engineer, Full-Stack Architect",
     },
     { name: "author", content: "Mumuni Abdulazeez (AzCodes)" },
     { property: "og:title", content: "About | Mumuni Abdulazeez (AzCodes)" },

@@ -42,12 +42,12 @@ const coreValues: CoreValue[] = [
 
 export default function AboutSection() {
   return (
-    <section className="px-30 py-20 space-y-10">
-      <div className="flex items-end justify-between">
+    <section className="px-10  md:px-30 py-20 space-y-10">
+      <div className="flex gap-5 items-start md:items-end justify-between flex-col md:flex-row">
         <div className="">
           <Badge className="font-bold">// WHO IS ABDULAZEEZ MUMUNI</Badge>
-          <h3 className="text-4xl">ENGINEERING WITH</h3>
-          <h1 className="text-5xl p-2 -mt-2.5 neo-box bg-main font-bold w-fit ">
+          <h3 className="text-2xl md:text-4xl">ENGINEERING WITH</h3>
+          <h1 className="text-3xl md:text-5xl p-2 -mt-2.5 neo-box bg-main font-bold w-fit ">
             PRECISION AND INTENSION
           </h1>
         </div>

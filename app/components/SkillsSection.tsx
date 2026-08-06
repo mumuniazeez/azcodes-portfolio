@@ -5,7 +5,12 @@ import type { Skill } from "./SkillCard";
 import SkillCard from "./SkillCard";
 import { useState } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowRight, Chip, Favorite, Sparkle } from "@hugeicons/core-free-icons";
+import {
+  ArrowRight,
+  Chip,
+  Favorite,
+  Sparkle,
+} from "@hugeicons/core-free-icons";
 import { Dot } from "lucide-react";
 import { Progress } from "./ui/progress";
 
@@ -91,34 +96,57 @@ const skills: Skill[] = [
 ];
 export default function SkillsSection() {
   const [selectedSkill, setSelectedSkill] = useState<Skill>(skills[0]);
+  const [selectedCategory, setSelectedCategory] = useState<
+    Skill["category"] | "ALL"
+  >("ALL");
   return (
-    <section className="px-30 py-20 space-y-10 border-t-2">
-      <div className="flex items-end justify-between">
+    <section
+      className="px-10  md:px-30 py-20 space-y-10 border-t-2"
+      id="tech-stack"
+    >
+      <div className="flex gap-5 items-start md:items-end justify-between flex-col md:flex-row">
         <div className="space-y-3">
           <Badge className="font-bold">// TECH SKILLS MATRIX</Badge>
-          <h3 className="text-5xl">
+          <h3 className="text-3xl md:text-5xl">
             SKILLS &{" "}
             <span className="p-2 neo-box bg-main font-bold w-fit ">
               CAPABILITIES
             </span>
           </h3>
         </div>
-        <div className="flex items-center gap-x-3">
-          <Button>All</Button>
+        <div className="flex items-center gap-3 flex-wrap">
+          <Button
+            onClick={() => setSelectedCategory("ALL")}
+            variant={selectedCategory === "ALL" ? "default" : "neutral"}
+          >
+            All
+          </Button>
           {categories.map((category) => (
-            <Button key={category}>{category}</Button>
+            <Button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              variant={selectedCategory === category ? "default" : "neutral"}
+            >
+              {category}
+            </Button>
           ))}
         </div>
       </div>
-      <div className="flex justify-between gap-8">
+      <div className="flex justify-between gap-8 flex-col md:flex-row">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:w-[50%]">
-          {skills.map((skill, idx) => (
-            <SkillCard
-              skill={skill}
-              setSelectedSkill={setSelectedSkill}
-              key={idx}
-            />
-          ))}
+          {skills
+            .filter((s) =>
+              selectedCategory !== "ALL"
+                ? s.category === selectedCategory
+                : true,
+            )
+            .map((skill, idx) => (
+              <SkillCard
+                skill={skill}
+                setSelectedSkill={setSelectedSkill}
+                key={idx}
+              />
+            ))}
         </div>
         <div className="bg-secondary-background border-border shadow-shadow border-2 p-3 h-fit md:w-[50%] sticky top-25 space-y-3">
           <div className="flex items-center justify-between pb-3 border-b-2">

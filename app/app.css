@@ -91,6 +91,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     @apply text-foreground font-base bg-background font-plus-jakarta-sans;
