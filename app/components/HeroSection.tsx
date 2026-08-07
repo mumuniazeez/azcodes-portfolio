@@ -113,8 +113,8 @@ export default function HeroSection() {
             {"<AzCodes />"}
           </Badge>
           <img
-            className="neo-box  w-100 h-100"
-            src="/images/azcodes-mumuni-abdulazeez.jpg"
+            className="neo-box  w-100"
+            src="/images/azcodes-mumuni-abdulazeez.png"
             alt="Mumuni Abdulazeez AzCodes"
           />
         </div>
