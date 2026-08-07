@@ -113,9 +113,11 @@ export default function Layout() {
           <HugeiconsIcon icon={Menu} />
         </Button>
         <div className="lg:flex items-center gap-x-3 hidden">
-          <Button>
-            <HugeiconsIcon icon={Document} /> Resume
-          </Button>
+          <Link to={"/resume.pdf"} target="_blank">
+            <Button>
+              <HugeiconsIcon icon={Document} /> Resume
+            </Button>
+          </Link>
           <Link to={"#contact"}>
             <Button>
               <HugeiconsIcon icon={Send} /> Hire Me
@@ -132,7 +134,7 @@ export default function Layout() {
             <a href="#">
               <div className="bg-main border-border shadow-shadow border-2 p-2 font-bold flex items-center gap-x-2">
                 <HugeiconsIcon icon={CodeSimpleIcon} />{" "}
-                {/* <h1 className="text-2xl">azcodes.dev</h1> */}
+                <h1 className="text-2xl">azcodes.dev</h1>
               </div>
             </a>
             <Badge className="bg-background">PORTFOLIO V2.0</Badge>
@@ -162,12 +164,12 @@ export default function Layout() {
           <h5>CONNECT WITH ABDULAZEEZ</h5>
 
           <div className="flex items-center justify-between gap-3 w-full">
-            <Link to={"https://github.com/mumumniazeez"} target="_blank">
+            <Link to={"https://github.com/mumuniazeez"} target="_blank">
               <Button>
                 <HugeiconsIcon icon={Github} />
               </Button>
             </Link>
-            <Link to={"https://github.com/mumumniazeez"} target="_blank">
+            <Link to={"https://github.com/mumuniazeez"} target="_blank">
               <Button>
                 <HugeiconsIcon icon={Linkedin} />
               </Button>

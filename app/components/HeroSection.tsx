@@ -9,6 +9,7 @@ import {
   X,
 } from "@hugeicons/core-free-icons";
 import { Badge } from "~/components/ui/badge";
+import { Link } from "react-router";
 
 export default function HeroSection() {
   return (
@@ -61,25 +62,35 @@ export default function HeroSection() {
             </Badge>
           </div>
           <div className="flex items-center space-x-3 mt-5">
-            <Button>
-              SEE MY WORK <HugeiconsIcon icon={ArrowUpRight} />
-            </Button>
-            <Button>
-              <HugeiconsIcon icon={Download} />
-              GET RESUME
-            </Button>
+            <Link to={"#projects"}>
+              <Button>
+                SEE MY WORK <HugeiconsIcon icon={ArrowUpRight} />
+              </Button>
+            </Link>
+            <Link to={"/resume.pdf"} target="_blank">
+              <Button>
+                <HugeiconsIcon icon={Download} />
+                GET RESUME
+              </Button>
+            </Link>
           </div>
           <div className="flex items-center space-x-3 mt-5">
             <p className="">Connect: </p>
-            <Button size={"icon"}>
-              <HugeiconsIcon icon={GithubIcon} fontWeight={900} />
-            </Button>
-            <Button size={"icon"}>
-              <HugeiconsIcon icon={Twitter} fontWeight={900} />
-            </Button>
-            <Button size={"icon"}>
-              <HugeiconsIcon icon={Email} fontWeight={900} />
-            </Button>
+            <Link to={"https://github.com/mumuniazeez"} target="_blank">
+              <Button size={"icon"}>
+                <HugeiconsIcon icon={GithubIcon} fontWeight={900} />
+              </Button>
+            </Link>
+            <Link to={"https://x.com/azcodesdev"} target="_blank">
+              <Button size={"icon"}>
+                <HugeiconsIcon icon={Twitter} fontWeight={900} />
+              </Button>
+            </Link>
+            <Link to={"mailto:mumuniazeez99@gmail.com"} target="_blank">
+              <Button size={"icon"}>
+                <HugeiconsIcon icon={Email} fontWeight={900} />
+              </Button>
+            </Link>
           </div>
         </div>
 

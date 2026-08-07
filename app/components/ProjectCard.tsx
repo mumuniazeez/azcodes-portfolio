@@ -54,9 +54,9 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
       <div className="p-4 bg-background flex items-center justify-between">
-        <Button>
+        {/* <Button>
           <HugeiconsIcon icon={Layer} /> CASE STUDY
-        </Button>
+        </Button> */}
         <div className="flex items-center gap-2">
           {project.githubUrl && (
             <Link to={project.githubUrl} target="_blank">

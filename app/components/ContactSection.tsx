@@ -1,5 +1,6 @@
 import {
   ArrowUpRight,
+  Check,
   Copy,
   Email,
   Location,
@@ -15,6 +16,7 @@ import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useState } from "react";
+import { Link } from "react-router";
 
 const messageSubjects: string[] = [
   "Tech Chat /  Coffee",
@@ -27,6 +29,19 @@ export default function ContactSection() {
   const [selectedMessageSubject, setSelectedMessageSubject] = useState(
     messageSubjects[0],
   );
+  const [hasCopied, setHasCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    window.navigator.clipboard
+      .writeText("mumuniazeez99@gmail.com")
+      .then(() => {
+        setHasCopied(true);
+      })
+      .catch((e) => console.log(e));
+    setTimeout(() => {
+      setHasCopied(false);
+    }, 2000);
+  };
 
   return (
     <section
@@ -62,8 +77,13 @@ export default function ContactSection() {
                 <HugeiconsIcon icon={Email} />
                 <p className="font-bold text-sm">mumuniazeez99@gmail.com</p>
               </div>
-              <Button className="w-full lg:w-auto">
-                <HugeiconsIcon icon={Copy} /> COPY
+              <Button
+                className="w-full lg:w-auto"
+                onClick={handleCopyEmail}
+                disabled={hasCopied}
+              >
+                <HugeiconsIcon icon={!hasCopied ? Copy : Check} />{" "}
+                {hasCopied ? "COPIED" : "COPY"}
               </Button>
             </div>
 
@@ -87,9 +107,12 @@ export default function ContactSection() {
             </div>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <Button size={"lg"} className="w-full">
-              GITHUB <HugeiconsIcon icon={ArrowUpRight} />
-            </Button>
+            <Link to={"https://github.com/mumuniazeez"} target="_blank">
+              <Button size={"lg"} className="w-full">
+                GITHUB <HugeiconsIcon icon={ArrowUpRight} />
+              </Button>
+            </Link>
+
             <Button size={"lg"} className="w-full">
               LINKEDIN <HugeiconsIcon icon={ArrowUpRight} />
             </Button>

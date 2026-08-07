@@ -10,6 +10,7 @@ import {
   X,
 } from "@hugeicons/core-free-icons";
 import { Badge } from "~/components/ui/badge";
+import { Link } from "react-router";
 
 interface CoreValue {
   icon: IconSvgElement;
@@ -51,9 +52,12 @@ export default function AboutSection() {
             PRECISION AND INTENSION
           </h1>
         </div>
+                  <Link to={"/resume.pdf"} target="_blank">
+
         <Button>
           <HugeiconsIcon icon={Download} /> FULL RESUME (PDF)
         </Button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
