@@ -7,10 +7,7 @@ export default function Marquee({ items }: { items: string[] }) {
         {items.map((item) => {
           return (
             <>
-              <span
-                key={item}
-                className="mx-4 text-4xl"
-              >
+              <span key={item} className="mx-4 text-2xl md:text-4xl">
                 {item}
               </span>
               <SparkleIcon />
@@ -23,10 +20,7 @@ export default function Marquee({ items }: { items: string[] }) {
         {items.map((item) => {
           return (
             <>
-              <span
-                key={item}
-                className="mx-4 text-4xl"
-              >
+              <span key={item} className="mx-4 text-2xl md:text-4xl">
                 {item}
               </span>
               <SparkleIcon />
