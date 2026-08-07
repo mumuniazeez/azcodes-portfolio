@@ -28,6 +28,11 @@ export function meta({}: Route.MetaArgs) {
       content:
         "Full-Stack Developer and Product-Focused Builder passionate about building useful technology.",
     },
+    {
+      property: "og:site_name",
+      content: "About | Mumuni Abdulazeez (AzCodes)",
+    },
+
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://azcodes.dev/" },
     {
