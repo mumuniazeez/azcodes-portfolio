@@ -1,6 +1,26 @@
 import { Badge } from "~/components/ui/badge";
+import ArticleCard from "./ArticleCard";
+import { Button } from "./ui/button";
+import { Link } from "react-router";
 
-export default function ArticleSection() {
+export const BLOG_SITE_URL = "https://blogs.azcodes.dev";
+export interface BlogPost {
+  topicKey: string;
+  title: string;
+  description: string;
+  badges: string[];
+  link: string;
+  slug: string;
+  createdAt: string;
+  featured: boolean;
+  readTime: string;
+}
+
+export default function ArticleSection({
+  blogPosts,
+}: {
+  blogPosts: BlogPost[];
+}) {
   return (
     <section
       className="px-10  md:px-30 py-20 space-y-20 border-t-2"
@@ -21,14 +41,15 @@ export default function ArticleSection() {
           tech industry, and my experience as a full-stack developer.
         </p>
       </div>
-      <div className="flex items-center justify-center flex-col gap-y-10">
-        <h3 className="text-3xl md:text-5xl">
-          COMING{" "}
-          <span className="p-2 neo-box bg-main font-bold w-fit ">SOON</span>
-        </h3>
-        <p className="italic text-black/60">
-          (psst. I'll start soon, comeback to check)
-        </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {blogPosts.slice(0, 3).map((blog) => (
+          <ArticleCard key={blog.link} blog={blog} />
+        ))}
+      </div>
+      <div className="flex justify-center">
+        <Link to={BLOG_SITE_URL}>
+          <Button>See All</Button>
+        </Link>
       </div>
     </section>
   );

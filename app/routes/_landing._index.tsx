@@ -5,8 +5,20 @@ import HeroSection from "~/components/HeroSection";
 import ProjectsSection from "~/components/ProjectsSection";
 import SkillsSection from "~/components/SkillsSection";
 import WorkExperienceSection from "~/components/WorkExperienceSection";
-import ArticleSection from "~/components/ArticleSection";
+import ArticleSection, {
+  BLOG_SITE_URL,
+  type BlogPost,
+} from "~/components/ArticleSection";
 import ContactSection from "~/components/ContactSection";
+
+export async function loader({
+  request,
+}: Route.LoaderArgs): Promise<{ blogPosts: BlogPost[] }> {
+  //
+  const res = await fetch(`${BLOG_SITE_URL}/api.json`);
+  const data: BlogPost[] = await res.json();
+  return { blogPosts: data };
+}
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -54,7 +66,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
+export default function Home({ loaderData }: Route.ComponentProps) {
   return (
     <div>
       <HeroSection />
@@ -77,7 +89,7 @@ export default function Home() {
       <ProjectsSection />
       <SkillsSection />
       <WorkExperienceSection />
-      <ArticleSection />
+      <ArticleSection blogPosts={loaderData.blogPosts} />
       <ContactSection />
     </div>
   );
