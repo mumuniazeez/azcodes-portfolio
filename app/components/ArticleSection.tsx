@@ -47,7 +47,7 @@ export default function ArticleSection({
         ))}
       </div>
       <div className="flex justify-center">
-        <Link to={BLOG_SITE_URL}>
+        <Link to={BLOG_SITE_URL} target="_blank">
           <Button>See All</Button>
         </Link>
       </div>
