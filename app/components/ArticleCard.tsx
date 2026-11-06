@@ -53,7 +53,7 @@ export default function ArticleCard({ blog }: { blog: BlogPost }) {
         <div className="border-t pt-2 flex items-center justify-between">
           <p className="text-sm text-black/70">{blog.createdAt}</p>
 
-          <Link to={blog.link}>
+          <Link to={`${BLOG_SITE_URL}${blog.link}`} target="_blank">
             <Button className={"group-hover:bg-black group-hover:text-white"}>
               READ POST <HugeiconsIcon icon={ArrowRight} />
             </Button>
